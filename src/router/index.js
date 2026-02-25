@@ -1,15 +1,32 @@
-import { createRouter, createWebHistory } from "vue-router"
-import Home from "../views/Home.vue"
-
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '@/views/Pages/publish/HomeView.vue'
+import PublishLayout from '@/components/layouts/PublishLayout.vue'
+import RegisterView from '@/views/Pages/publish/auth/RegisterView.vue'
 const routes = [
-    {
-        path: "/home",
-        name: "Home",
-        component: () => import("../views/Home.vue")
+   {
+      path: '/register',
+      name:'Register',
+      component: RegisterView
+
+    },
+  { 
+   
+    path: '/', 
+    component: PublishLayout,
+    children:[{
+      path: '',
+      name:'Home',
+      component: HomeView
+
     }
+    
+
+    ]
+  },
+  
 ]
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes
+  history: createWebHistory(),
+  routes,
 })
 export default router

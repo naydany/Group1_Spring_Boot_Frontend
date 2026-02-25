@@ -1,9 +1,5 @@
-<script setup></script>
-
 <template>
-  <router-link to="/home">Go to Home</router-link>
-
-  <router-view/>
+  <div>
+    <router-view />
+  </div>
 </template>
-
-<style scoped></style>
