@@ -6,7 +6,7 @@ import AuthLogin from "@/views/Pages/publish/auth/AuthLogin.vue";
 import DashboardHome from "@/views/Pages/dashboard/DashboardHome.vue";
 import UserLayout from "@/components/layouts/UserLayout.vue";
 import AdminLayout from "@/components/layouts/AdminLayout.vue";
-
+import applyGuards from "./guard";
 const routes = [
   // ✅ LOGIN at "/"
   {
@@ -101,5 +101,8 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+
+applyGuards(router);
 
 export default router;
