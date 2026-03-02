@@ -25,7 +25,7 @@
         <ul class="navbar-nav ms-auto fs-4 ">
 
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Home</router-link>
+            <router-link class="nav-link" to="/home">Home</router-link>
           </li>
 
           <li class="nav-item">
